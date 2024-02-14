@@ -29,7 +29,7 @@ def hello():
     Returns:
         A string with the words 'Hello World!'.
     """
-    return "Hello World - LAB Final - DEVOPS - Versao 1.0!"
+    return "Hello World - LAB Final - DEVOPS - Versao 1.0 - Develop Env!"
 
 
 if __name__ == "__main__":
