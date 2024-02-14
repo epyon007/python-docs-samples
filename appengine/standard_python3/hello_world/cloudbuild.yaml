@@ -1,6 +1,6 @@
 steps:
   # Etapa de compilação
-  - name: "python:3.8"
+  - name: "python:3.9"
     entrypoint: "bash"
     args:
       - "-c"
@@ -9,7 +9,7 @@ steps:
         pip install -r requirements.txt
 
   # Etapa de teste
-  - name: "python:3.8"
+  - name: "python:3.9"
     entrypoint: "bash"
     args:
       - "-c"
