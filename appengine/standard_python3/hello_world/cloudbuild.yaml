@@ -3,7 +3,11 @@ steps:
   - name: 'python:3.9'
     entrypoint: 'pip'
     args: ['install', '-r', 'appengine/standard_python3/hello_world/requirements.txt']
-  # Etapa de compilação: Compilar
+  # Etapa de Listagem de libs
+  - name: 'List lins'
+    entrypoint: 'pip'
+    args: ['list']
+  # Etapa de compilacao: Compilar
   - name: 'python:3.9'
     entrypoint: 'python'
     args: ['appengine/standard_python3/hello_world/main.py', 'sdist', 'bdist_wheel']
