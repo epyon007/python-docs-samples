@@ -6,8 +6,8 @@ steps:
   # Etapa de compilação: Compilar
   - name: 'python:3.9'
     entrypoint: 'python'
-    args: ['main.py', 'sdist', 'bdist_wheel']
+    args: ['appengine/standard_python3/hello_world/main.py', 'sdist', 'bdist_wheel']
   # Etapa de compilação: Testar
   - name: 'python:3.9'
     entrypoint: 'python'
-    args: ['main_test.py', 'test']
+    args: ['appengine/standard_python3/hello_world/main_test.py', 'test']
