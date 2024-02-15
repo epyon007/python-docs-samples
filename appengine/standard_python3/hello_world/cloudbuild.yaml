@@ -1,4 +1,10 @@
 steps:
+  - name: 'python3.9'
+    entrypoint: 'python'
+    args: ['-m', 'pip', 'install', '--upgrade', 'pip']
+  - name: 'python3.9'
+    entrypoint: python
+    args: ['-m', 'pip', 'install', 'build', 'pytest', 'Flask', '--user']
   # Etapa de compilação: Instalar dependências
   - name: 'python:3.9'
     entrypoint: 'pip'
