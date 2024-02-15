@@ -11,15 +11,3 @@ steps:
   - name: 'python:3.9'
     entrypoint: 'python'
     args: ['setup.py', 'test']
-  # Etapa de compilação: Empacotar
-  - name: 'gcr.io/cloud-builders/gsutil'
-    args: ['cp', 'dist/*', 'gs://$PROJECT_ID']
-  # Etapa de compilação: Publicar
-  - name: 'gcr.io/cloud-builders/gsutil'
-    args: ['acl', 'ch', '-u', 'allUsers:R', 'gs://$PROJECT_ID/*']
-  # Etapa de compilação: Publicar
-  - name: 'gcr.io/cloud-builders/gsutil'
-    args: ['web', 'set', '-m', 'index.html', '-e', '404.html', 'gs://$PROJECT_ID']
-  # Etapa de compilação: Publicar
-  - name: 'gcr.io/cloud-builders/gsutil'
-    args: ['iam', 'set', 'on', 'gs://$PROJECT_ID', 'allUsers:objectViewer']
