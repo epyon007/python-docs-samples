@@ -6,8 +6,8 @@ steps:
   # Etapa de compilação: Compilar
   - name: 'python:3.9'
     entrypoint: 'python'
-    args: ['setup.py', 'sdist', 'bdist_wheel']
+    args: ['main.py', 'sdist', 'bdist_wheel']
   # Etapa de compilação: Testar
   - name: 'python:3.9'
     entrypoint: 'python'
-    args: ['setup.py', 'test']
+    args: ['main_test.py', 'test']
