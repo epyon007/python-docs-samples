@@ -1,23 +1,23 @@
 steps:
   - name: 'python:3.9'
     entrypoint: 'python'
-    args: ['-m', 'pip', 'install', '--upgrade', 'pip']
+    args: ['-m', 'pip', 'install', '--upgrade', 'pip', '--user']
   - name: 'python:3.9'
     entrypoint: python
     args: ['-m', 'pip', 'install', 'build', 'pytest', 'Flask', '--user']
   # Etapa de compilação: Instalar dependências
   - name: 'python:3.9'
     entrypoint: 'pip'
-    args: ['install', '-r', 'appengine/standard_python3/hello_world/requirements.txt']
+    args: ['install', '-r', 'appengine/standard_python3/hello_world/requirements.txt', '--user']
   # Etapa de Listagem de libs
   - name: 'python:3.9'
     entrypoint: 'pip'
-    args: ['list']
+    args: ['list', '--user']
   # Etapa de compilacao: Compilar
   - name: 'python:3.9'
     entrypoint: 'python'
-    args: ['appengine/standard_python3/hello_world/main.py', 'sdist', 'bdist_wheel']
+    args: ['appengine/standard_python3/hello_world/main.py', 'sdist', 'bdist_wheel', '--user']
   # Etapa de compilação: Testar
   - name: 'python:3.9'
     entrypoint: 'python'
-    args: ['appengine/standard_python3/hello_world/main_test.py', 'test']
+    args: ['appengine/standard_python3/hello_world/main_test.py', 'test', '--user']
