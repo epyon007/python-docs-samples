@@ -14,12 +14,12 @@
 
 # [START gae_python38_app]
 # [START gae_python3_app]
-from flask import Flask
+from flask import flask
 
 
 # If `entrypoint` is not defined in app.yaml, App Engine will look for an app
 # called `app` in `main.py`.
-app = Flask(__name__)
+app = flask(__name__)
 
 
 @app.route("/")
