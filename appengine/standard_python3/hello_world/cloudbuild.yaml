@@ -2,7 +2,7 @@ steps:
   # Etapa de compilação: Instalar dependências
   - name: 'python:3.9'
     entrypoint: 'pip'
-    args: ['install', '-r', 'requirements.txt']
+    args: ['install', '-r', 'appengine/standard_python3/hello_world/requirements.txt']
   # Etapa de compilação: Compilar
   - name: 'python:3.9'
     entrypoint: 'python'
