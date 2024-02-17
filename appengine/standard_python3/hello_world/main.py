@@ -1,4 +1,4 @@
-print("Hello World! Caraio! - LAB Final - DEVOPS - Versao 1.1!")
+# print("Hello World! Caraio! - LAB Final - DEVOPS - Versao 1.1!")
 # Copyright 2018 Google LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -37,6 +37,6 @@ def hello():
     # This is used when running locally only. When deploying to Google App
     # Engine, a webserver process such as Gunicorn will serve the app. You
     # can configure startup instructions by adding `entrypoint` to app.yaml.
-#    app.run(host="127.0.0.1", port=8080, debug=False)
+    app.run(host="127.0.0.1", port=8080, debug=False)
 #[END gae_python3_app]
 #[END gae_python38_app]
