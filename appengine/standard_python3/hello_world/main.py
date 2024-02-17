@@ -13,8 +13,8 @@ print("Hello World! Caraio! - LAB Final - DEVOPS - Versao 1.1!")
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# [START gae_python38_app]
-# [START gae_python3_app]
+#[START gae_python38_app]
+#[START gae_python3_app]
 from flask import Flask
 
 
@@ -24,13 +24,13 @@ app = Flask(__name__)
 
 
 @app.route("/")
-#def hello():
-#    """Return a friendly HTTP greeting.
-#
-#    Returns:
-#        A string with the words 'Hello World!'.
-#    """
-#    return "Hello World - LAB Final - DEVOPS - Versao 1.0!"
+def hello():
+    """Return a friendly HTTP greeting.
+
+    Returns:
+        A string with the words 'Hello World!'.
+    """
+    return "Hello World - LAB Final - DEVOPS - Versao 1.0!"
 
 
 if __name__ == "__main__":
@@ -38,5 +38,5 @@ if __name__ == "__main__":
     # Engine, a webserver process such as Gunicorn will serve the app. You
     # can configure startup instructions by adding `entrypoint` to app.yaml.
     app.run(host="127.0.0.1", port=8080, debug=True)
-# [END gae_python3_app]
-# [END gae_python38_app]
+#[END gae_python3_app]
+#[END gae_python38_app]
