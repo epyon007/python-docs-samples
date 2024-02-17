@@ -5,14 +5,10 @@ steps:
   - name: 'python:3.9'
     entrypoint: python
     args: ['-m', 'pip', 'install', 'build', 'pytest', 'Flask', '--user']
-  # Etapa de compilação: Instalar dependências
+  # Etapa de Instalacao dependencias
   - name: 'python:3.9'
     entrypoint: 'pip'
     args: ['install', '-r', 'appengine/standard_python3/hello_world/requirements.txt', '--user']
-  # Etapa de Listagem de libs
-  - name: 'python:3.9'
-    entrypoint: 'pip'
-    args: ['list', '--user']
   # Etapa de Compilacao
   - name: 'python:3.9'
     entrypoint: 'python'
